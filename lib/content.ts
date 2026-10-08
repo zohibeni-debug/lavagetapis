@@ -29,9 +29,14 @@ export const TYPE_LABELS: Record<string, string> = {
 
 export type Zone = { dept: string; code: string; cities: string[] };
 
-/** Zones d'intervention : Paris et les deux départements voisins, 19 communes. */
+/** Zones d'intervention : Paris et les deux départements voisins, 32 communes. */
 export const ZONES: Zone[] = [
-  ["Paris", "75", ["Paris 7e", "Paris 8e", "Paris 11e", "Paris 15e", "Paris 16e", "Paris 17e", "Paris 20e"]],
+  ["Paris", "75", [
+    "Paris 1er", "Paris 2e", "Paris 3e", "Paris 4e", "Paris 5e",
+    "Paris 6e", "Paris 7e", "Paris 8e", "Paris 9e", "Paris 10e",
+    "Paris 11e", "Paris 12e", "Paris 13e", "Paris 14e", "Paris 15e",
+    "Paris 16e", "Paris 17e", "Paris 18e", "Paris 19e", "Paris 20e",
+  ]],
   ["Hauts-de-Seine", "92", ["Boulogne-Billancourt", "Neuilly-sur-Seine", "Levallois-Perret", "Issy-les-Moulineaux", "Rueil-Malmaison", "Saint-Cloud"]],
   ["Val-de-Marne", "94", ["Vincennes", "Saint-Mandé", "Nogent-sur-Marne", "Saint-Maur-des-Fossés", "Créteil", "Le Perreux"]],
 ].map(([dept, code, cities]) => ({

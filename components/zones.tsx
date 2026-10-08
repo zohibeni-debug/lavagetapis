@@ -1,7 +1,7 @@
 import { ZONES } from "@/lib/content";
 
 // La maquette construisait cette liste en JavaScript : elle est ici rendue
-// côté serveur pour que les 19 communes soient présentes dans le HTML source.
+// côté serveur pour que les 32 communes soient présentes dans le HTML source.
 export default function Zones() {
   return (
     <>
