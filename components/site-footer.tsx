@@ -53,10 +53,10 @@ export default function SiteFooter({ anchorPrefix = "" }: { anchorPrefix?: strin
                   <a href={`${anchorPrefix}#zones`}>Lavage tapis Boulogne</a>
                 </li>
                 <li>
-                  <a href={`${anchorPrefix}#zones`}>Lavage tapis Montreuil</a>
+                  <a href={`${anchorPrefix}#zones`}>Lavage tapis Neuilly</a>
                 </li>
                 <li>
-                  <a href={`${anchorPrefix}#zones`}>Lavage tapis Versailles</a>
+                  <a href={`${anchorPrefix}#zones`}>Lavage tapis Créteil</a>
                 </li>
                 <li>
                   <a href={`${anchorPrefix}#zones`}>Lavage tapis Vincennes</a>

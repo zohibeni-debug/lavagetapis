@@ -1,7 +1,7 @@
 import { ZONES } from "@/lib/content";
 
 // La maquette construisait cette liste en JavaScript : elle est ici rendue
-// côté serveur pour que les 36 communes soient présentes dans le HTML source.
+// côté serveur pour que les 19 communes soient présentes dans le HTML source.
 export default function Zones() {
   return (
     <>
@@ -12,9 +12,9 @@ export default function Zones() {
             <span className="eyebrow">Zones d&apos;intervention</span>
             <h2>Lavage de tapis à Paris et en Île-de-France</h2>
             <p className="lede">
-              Enlèvement et livraison dans les huit départements franciliens. Votre ville
-              n&apos;apparaît pas ? Faites quand même votre demande : nous la transmettons à
-              l&apos;atelier le plus proche.
+              Enlèvement et livraison à Paris et dans les départements voisins : Hauts-de-Seine
+              et Val-de-Marne. Votre ville n&apos;apparaît pas ? Faites quand même votre demande :
+              nous la transmettons à l&apos;atelier le plus proche.
             </p>
           </div>
           <div className="zones" id="zonesList">
