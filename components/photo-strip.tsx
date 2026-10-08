@@ -1,0 +1,8 @@
+export default function PhotoStrip() {
+  return (
+    <>
+      <section className="strip" aria-label="Tapis lavés en atelier"><div className="strip-track" id="stripTrack"><figure><img src="img/tapis-persan-salon.jpg" alt="Tapis persan à médaillon central et bordure vert d'eau dans un salon" width="736" height="736" loading="lazy" style={{ objectPosition: "50% 58%" }} /><figcaption>Persan</figcaption></figure><figure><img src="img/tapis-berbere-salon.jpg" alt="Tapis berbère en laine écrue à motifs noirs dans un salon" width="540" height="360" loading="lazy" /><figcaption>Berbère</figcaption></figure><figure><img src="img/tapis-kilim-salon.jpg" alt="Kilim tissé plat écru à losanges ocre, bleus et verts dans un salon" width="822" height="711" loading="lazy" style={{ objectPosition: "50% 68%" }} /><figcaption>Kilim</figcaption></figure><figure><img src="img/tapis-soie-salon.jpg" alt="Tapis en soie ivoire à médaillon et bordure florale avec franges, sur parquet" width="840" height="630" loading="lazy" style={{ objectPosition: "50% 60%" }} /><figcaption>Soie</figcaption></figure><figure><img src="img/tapis-shaggy-salon.jpg" alt="Tapis shaggy écru à poils longs dans un salon" width="1200" height="686" loading="lazy" /><figcaption>Shaggy</figcaption></figure><figure><img src="img/tapis-synthetique-salon.jpg" alt="Tapis synthétique écru à motifs géométriques colorés et pompons, dans un salon" width="1125" height="705" loading="lazy" style={{ objectPosition: "50% 70%" }} /><figcaption>Synthétique</figcaption></figure></div></section>
+      <div className="frieze" aria-hidden="true" />
+    </>
+  );
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="8 28 384 212" width="384" height="212">
+<title>lavagetapis.fr</title>
+<defs>
+    <pattern id="chain" x="40" y="44" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect width="12" height="12" fill="#f9d140"/>
+      <path d="M6 2.2 9.8 6 6 9.8 2.2 6z" fill="#00615b"/>
+    </pattern>
+    <filter id="splotch" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="4"/>
+      <feDisplacementMap in="SourceGraphic" scale="14"/>
+    </filter>
+  </defs>
+
+    <g class="fr-l" stroke="#00615b" stroke-width="2.4" stroke-linecap="round">
+      <path d="M30 42h-15M30 49h-12M30 56h-16M30 63h-13M30 70h-15M30 77h-12M30 84h-16M30 91h-13M30 98h-15M30 105h-12M30 112h-16M30 119h-13M30 126h-15M30 133h-12M30 140h-16M30 147h-13M30 154h-15M30 161h-12M30 168h-16M30 175h-13M30 182h-15M30 189h-12M30 196h-16M30 203h-13M30 210h-15M30 217h-12M30 224h-16"/>
+    </g>
+    <g class="fr-r" stroke="#00615b" stroke-width="2.4" stroke-linecap="round">
+      <path d="M370 42h15M370 49h12M370 56h16M370 63h13M370 70h15M370 77h12M370 84h16M370 91h13M370 98h15M370 105h12M370 112h16M370 119h13M370 126h15M370 133h12M370 140h16M370 147h13M370 154h15M370 161h12M370 168h16M370 175h13M370 182h15M370 189h12M370 196h16M370 203h13M370 210h15M370 217h12M370 224h16"/>
+    </g>
+    <rect x="30" y="34" width="340" height="198" rx="7" fill="#00615b"/>
+    <rect x="40" y="44" width="320" height="178" rx="2" fill="url(#chain)"/>
+    <rect x="52" y="56" width="296" height="154" fill="#00615b"/>
+    <rect x="59" y="63" width="282" height="140" fill="none" stroke="#f9d140" stroke-width="1.6" stroke-dasharray="6 4"/>
+    <path d="M59 63h40l-40 32zM341 63h-40l40 32zM59 203h40l-40-32zM341 203h-40l40-32z" fill="#f9d140"/>
+    <path d="M200 70 270 133 200 196 130 133z" fill="#004843" stroke="#f9d140" stroke-width="3.4" stroke-linejoin="round"/>
+    <path d="M112 125l8 8-8 8-8-8zM288 125l8 8-8 8-8-8z" fill="#f9d140"/>
+    <path d="M200 95c11 15 23 28 23 44a23 23 0 0 1-46 0c0-16 12-29 23-44z" fill="#f9d140"/>
+    <path d="M190 137a11 11 0 0 0 6 13" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round"/>
+  
+</svg>
