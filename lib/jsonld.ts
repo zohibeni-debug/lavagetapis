@@ -7,7 +7,7 @@ export const jsonLd = {
       "@id": "https://lavagetapis.fr/#org",
       name: "lavagetapis.fr",
       url: "https://lavagetapis.fr/",
-      logo: "https://lavagetapis.fr/logo.svg",
+      logo: "https://lavagetapis.fr/logo/logo-lavagetapis.svg",
     },
     {
       "@type": "Service",
