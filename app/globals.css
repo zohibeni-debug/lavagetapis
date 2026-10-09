@@ -219,6 +219,9 @@ p { margin: 0; }
 @keyframes sway { from { transform: skewY(-5deg) scaleX(.94); } to { transform: skewY(5deg) scaleX(1.04); } }
 .wave-foam circle { transform-box: fill-box; transform-origin: center; animation: pop 0.9s ease-in-out infinite alternate; }
 @keyframes pop { from { transform: scale(.7); } to { transform: scale(1.15); } }
+/* Tapis du hero : léger balancement, en écho au frémissement des franges du tapis dessiné */
+.rug-photo { transform-box: fill-box; transform-origin: center; animation: rugsway 5s ease-in-out infinite alternate; }
+@keyframes rugsway { from { transform: translateY(-2px) rotate(-.5deg); } to { transform: translateY(2px) rotate(.5deg); } }
 
 /* ---------- gallery strip */
 .strip { padding-block: clamp(28px, 4vw, 44px) clamp(40px, 6vw, 64px); overflow: hidden; }
