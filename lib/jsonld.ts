@@ -6,6 +6,22 @@ const SITE = "https://lavagetapis.fr";
 const PUBLIE = "2026-10-08";
 const MODIFIE = "2026-10-21";
 
+/** Les 20 arrondissements de Paris, tels qu'ils sont desservis. */
+const ARRONDISSEMENTS = [
+  "Paris 1er", "Paris 2e", "Paris 3e", "Paris 4e", "Paris 5e",
+  "Paris 6e", "Paris 7e", "Paris 8e", "Paris 9e", "Paris 10e",
+  "Paris 11e", "Paris 12e", "Paris 13e", "Paris 14e", "Paris 15e",
+  "Paris 16e", "Paris 17e", "Paris 18e", "Paris 19e", "Paris 20e",
+].map((name) => ({ "@type": "City", name }));
+
+/** Les communes desservies dans les deux départements limitrophes. */
+const COMMUNES = [
+  "Boulogne-Billancourt", "Neuilly-sur-Seine", "Levallois-Perret",
+  "Issy-les-Moulineaux", "Rueil-Malmaison", "Saint-Cloud",
+  "Vincennes", "Saint-Mandé", "Nogent-sur-Marne", "Saint-Maur-des-Fossés",
+  "Créteil", "Le Perreux-sur-Marne",
+].map((name) => ({ "@type": "City", name }));
+
 export const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -15,6 +31,7 @@ export const jsonLd = {
       name: "lavagetapis.fr",
       url: "https://lavagetapis.fr/",
       logo: "https://lavagetapis.fr/logo/logo-lavagetapis.svg",
+      description: "Professional carpet cleaning and deep care company",
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "service client",
@@ -47,8 +64,18 @@ export const jsonLd = {
       "@id": `${SITE}/#service`,
       serviceType: "Lavage de tapis",
       name: "Lavage de tapis en atelier avec enlèvement et livraison",
-      provider: { "@id": "https://lavagetapis.fr/#org" },
-      areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
+      provider: { "@id": `${SITE}/#org` },
+      // Zone desservie détaillée : les 20 arrondissements de Paris, les douze
+      // communes des Hauts-de-Seine et du Val-de-Marne, dans les trois zones.
+      areaServed: [
+        { "@type": "AdministrativeArea", name: "Paris" },
+        ...ARRONDISSEMENTS,
+        { "@type": "AdministrativeArea", name: "Hauts-de-Seine" },
+        ...COMMUNES.slice(0, 6),
+        { "@type": "AdministrativeArea", name: "Val-de-Marne" },
+        ...COMMUNES.slice(6),
+        { "@type": "AdministrativeArea", name: "Île-de-France" },
+      ],
       offers: {
         "@type": "AggregateOffer",
         priceCurrency: "EUR",
