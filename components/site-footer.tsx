@@ -47,19 +47,19 @@ export default function SiteFooter({ anchorPrefix = "" }: { anchorPrefix?: strin
               <h4>Villes</h4>
               <ul>
                 <li>
-                  <a href={`${anchorPrefix}#zones`}>Nettoyage tapis Paris</a>
+                  <a href="/lavage-tapis-paris">Nettoyage tapis Paris</a>
                 </li>
                 <li>
-                  <a href={`${anchorPrefix}#zones`}>Lavage tapis Boulogne</a>
+                  <a href="/lavage-tapis-boulogne-billancourt">Lavage tapis Boulogne</a>
                 </li>
                 <li>
-                  <a href={`${anchorPrefix}#zones`}>Lavage tapis Neuilly</a>
+                  <a href="/lavage-tapis-neuilly-sur-seine">Lavage tapis Neuilly</a>
                 </li>
                 <li>
-                  <a href={`${anchorPrefix}#zones`}>Lavage tapis Créteil</a>
+                  <a href="/lavage-tapis-creteil">Lavage tapis Créteil</a>
                 </li>
                 <li>
-                  <a href={`${anchorPrefix}#zones`}>Lavage tapis Vincennes</a>
+                  <a href="/lavage-tapis-vincennes">Lavage tapis Vincennes</a>
                 </li>
               </ul>
             </div>

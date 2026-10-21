@@ -38,7 +38,7 @@ export const ZONES: Zone[] = [
     "Paris 16e", "Paris 17e", "Paris 18e", "Paris 19e", "Paris 20e",
   ]],
   ["Hauts-de-Seine", "92", ["Boulogne-Billancourt", "Neuilly-sur-Seine", "Levallois-Perret", "Issy-les-Moulineaux", "Rueil-Malmaison", "Saint-Cloud"]],
-  ["Val-de-Marne", "94", ["Vincennes", "Saint-Mandé", "Nogent-sur-Marne", "Saint-Maur-des-Fossés", "Créteil", "Le Perreux"]],
+  ["Val-de-Marne", "94", ["Vincennes", "Saint-Mandé", "Nogent-sur-Marne", "Saint-Maur-des-Fossés", "Créteil", "Le Perreux-sur-Marne"]],
 ].map(([dept, code, cities]) => ({
   dept: dept as string,
   code: code as string,
