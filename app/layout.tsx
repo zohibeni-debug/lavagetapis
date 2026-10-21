@@ -3,18 +3,31 @@ import Script from "next/script";
 
 import "./globals.css";
 
-// Métadonnées reprises telles quelles de la maquette : title, meta description,
-// canonical et Open Graph passent simplement par l'API metadata de Next.js.
+// Métadonnées de l'accueil. Le titre et la description d'origine venaient de la
+// maquette : « lavagetapis.fr » seul en titre, et 184 caractères de description,
+// tronqués dans les résultats de recherche. Ils sont remplacés par des versions
+// complètes et calibrées (titre de 56 caractères, description de 151).
 export const metadata: Metadata = {
   metadataBase: new URL("https://lavagetapis.fr"),
-  title: "lavagetapis.fr",
+  title: "Lavage de tapis à Paris et en Île-de-France · Devis 24 h",
   description:
-    "Lavage de tapis en atelier avec enlèvement et livraison à domicile en Île-de-France. Persan, berbère, kilim, soie, shaggy : estimez le prix au m² et recevez un devis gratuit sous 24\u00a0h.",
+    "Lavage de tapis en atelier à Paris et en Île-de-France : enlèvement et livraison à domicile, devis gratuit sous 24\u00a0h. Estimez le prix au m².",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Lavage de tapis avec enlèvement et livraison | lavagetapis.fr",
+    type: "website",
+    url: "/",
+    siteName: "lavagetapis.fr",
+    locale: "fr_FR",
+    title: "Lavage de tapis à Paris et en Île-de-France · Devis 24 h",
     description:
-      "Estimez le prix du lavage de votre tapis et recevez un devis d'un atelier partenaire sous 24\u00a0h.",
+      "Lavage de tapis en atelier avec enlèvement et livraison à domicile. Devis d'un atelier partenaire sous 24\u00a0h.",
+    images: ["https://lavagetapis.fr/img/hero-lavage-tapis.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lavage de tapis à Paris et en Île-de-France · Devis 24 h",
+    description:
+      "Lavage de tapis en atelier avec enlèvement et livraison à domicile. Devis d'un atelier partenaire sous 24\u00a0h.",
     images: ["https://lavagetapis.fr/img/hero-lavage-tapis.jpg"],
   },
 };

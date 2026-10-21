@@ -1,4 +1,11 @@
-// Bloc JSON-LD schema.org de la maquette, conservé à l'identique dans le HTML.
+// Bloc JSON-LD schema.org. Le contenu de la maquette est conservé ; trois nœuds
+// ont été ajoutés pour couvrir ce que les outils d'audit signalaient comme
+// manquant : WebSite (identité du site), WebPage (avec ses dates de publication
+// et de modification) et le contact téléphonique de l'organisation.
+const SITE = "https://lavagetapis.fr";
+const PUBLIE = "2026-10-08";
+const MODIFIE = "2026-10-21";
+
 export const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -8,9 +15,36 @@ export const jsonLd = {
       name: "lavagetapis.fr",
       url: "https://lavagetapis.fr/",
       logo: "https://lavagetapis.fr/logo/logo-lavagetapis.svg",
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "service client",
+        telephone: "+33762870707",
+        areaServed: "FR",
+        availableLanguage: "fr",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE}/#website`,
+      url: `${SITE}/`,
+      name: "lavagetapis.fr",
+      inLanguage: "fr-FR",
+      publisher: { "@id": `${SITE}/#org` },
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${SITE}/#webpage`,
+      url: `${SITE}/`,
+      name: "Lavage de tapis à Paris et en Île-de-France · Devis 24 h",
+      isPartOf: { "@id": `${SITE}/#website` },
+      about: { "@id": `${SITE}/#service` },
+      inLanguage: "fr-FR",
+      datePublished: PUBLIE,
+      dateModified: MODIFIE,
     },
     {
       "@type": "Service",
+      "@id": `${SITE}/#service`,
       serviceType: "Lavage de tapis",
       name: "Lavage de tapis en atelier avec enlèvement et livraison",
       provider: { "@id": "https://lavagetapis.fr/#org" },
