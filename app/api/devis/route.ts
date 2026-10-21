@@ -49,6 +49,7 @@ export async function POST(request: Request) {
   const callbackSlot = text(form, "when", 60);
   const message = text(form, "msg", 2000);
   const estimate = text(form, "recap", 300);
+  const origin = text(form, "origin", 80);
   const problems = form
     .getAll("pb")
     .filter((value): value is string => typeof value === "string")
@@ -116,13 +117,14 @@ export async function POST(request: Request) {
     ["Créneau de rappel", callbackSlot || "dès que possible"],
     ["Précisions", message || "—"],
     ["Estimation du simulateur", estimate || "—"],
+    ["Page d'origine", origin || "accueil"],
     ["Photos", photos.length ? `${photos.length} pièce(s) jointe(s)` : "aucune"],
   ];
 
   let leadId: number;
   try {
     leadId = await insertLead({
-      source: "devis",
+      source: origin ? `devis:${origin}` : "devis",
       carpetType: typeLabel,
       dimensions: dimensions || null,
       problems: problems || null,

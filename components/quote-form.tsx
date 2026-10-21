@@ -1,7 +1,13 @@
 // Formulaire de devis. Le rendu est identique à la maquette ; seuls des
 // attributs `name` et un champ leurre invisible ont été ajoutés pour permettre
 // l'envoi réel vers POST /api/devis.
-export default function QuoteForm() {
+export default function QuoteForm({
+  defaultPostal = "",
+  origin = "",
+}: {
+  defaultPostal?: string;
+  origin?: string;
+} = {}) {
   return (
     <>
       <div className="frieze" aria-hidden="true" />
@@ -23,6 +29,9 @@ export default function QuoteForm() {
             />
           </div>
           <form className="form" id="devisForm" noValidate>
+            {origin ? (
+              <input type="hidden" name="origin" value={origin} />
+            ) : null}
             <div
               aria-hidden="true"
               style={{
@@ -132,6 +141,7 @@ export default function QuoteForm() {
                     maxLength={5}
                     autoComplete="postal-code"
                     required
+                    defaultValue={defaultPostal}
                   />
                 </label>
               </div>

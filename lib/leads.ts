@@ -2,7 +2,7 @@ import { createHash } from "node:crypto";
 
 import { getPool } from "./db";
 
-export type LeadSource = "devis" | "partenaire";
+export type LeadSource = "devis" | "partenaire" | `devis:${string}`;
 
 export type Lead = {
   source: LeadSource;
