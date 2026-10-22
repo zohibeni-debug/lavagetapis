@@ -88,6 +88,12 @@ export default function SiteFooter({ anchorPrefix = "" }: { anchorPrefix?: strin
               <a href="/confidentialite">Confidentialité</a> ·{" "}
               <a href="/mentions-legales#cgu">CGU</a>
             </span>
+            <span>
+              Site réalisé par{" "}
+              <a href="https://allositeweb.com" target="_blank" rel="noopener">
+                ALLOSITEWEB
+              </a>
+            </span>
           </div>
         </div>
       </footer>
