@@ -22,6 +22,13 @@ export default function SiteFooter({ anchorPrefix = "" }: { anchorPrefix?: strin
                 Service de mise en relation avec des ateliers de lavage de tapis en Île-de-France.
                 Les prestations sont réalisées par des ateliers indépendants, sur devis.
               </p>
+              <p>
+                LavageTapis.fr est un site géré par{" "}
+                <a href="https://tapiscommeneuf.fr/" target="_blank" rel="noopener">
+                  Tapis Comme Neuf
+                </a>
+                .
+              </p>
             </div>
             <div>
               <h4>Lavage par type</h4>
